@@ -50,9 +50,15 @@ namespace ContactPage.Controllers
                 contact.Id = 0;
                 _context.ContactInfo.Add(contact);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Saved");
             }
             return View(contact);
         }
+
+        public string Saved()
+        {
+            return "Thank You.  Now Your Contact Information Is Saved In A Database!";
+        }
+
     }
 }
