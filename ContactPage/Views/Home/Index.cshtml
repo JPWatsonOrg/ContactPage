@@ -8,13 +8,20 @@
 
     #skillsTable td {
         border: solid 1px;
+        padding-left: 5px;
     }
+    #skillsTable td:first-child {
+        width: 220px;
+    }
+
     #skillsTable tr:nth-child(odd) td {
         background-color: white;
     }
+
     #skillsTable tr:nth-child(even) td {
         background-color: lightgray;
     }
+
     .wideRow {
         width: 100%;
     }
@@ -28,12 +35,25 @@
         border-bottom: solid 2px;
     }
 
-    #ExperienceSect {
+    #ExperienceSect, #EducationSect {
         border-bottom: solid 2px;
     }
 
-    #ExperienceTitleLCI {
+    #ExperienceTitle {
         font-weight: bold;
+    }
+
+    #ulExperience li {
+        margin-left: -20px;
+    }
+
+    div div h1:last-child {
+        margin-top: -10px;
+        font-size: medium;
+    }
+
+    #divEducation {
+        margin-bottom: 20px;
     }
 </style>
 
@@ -84,11 +104,40 @@
     </div>
     <div class="col-md-3 wideRow">
         <h2 id="ExperienceSect">Experience</h2>
-        <div id="ExperienceTitleLCI">Senior Certified .NET Developer, Federal Aviation Administration (Contract) 07/2016 - 06/2017</div>
-        <ul>
+        <div id="ExperienceTitle">Senior Certified .NET Developer, Federal Aviation Administration (Contract) 07/2016 - 06/2017</div>
+        <ul id="ulExperience">
             <li>Implemented UI and server-side components for file upload functionality in a workflow application.  This led to FAA employees having a centralized view of action request information.</li>
             <li>Improved accessibility of the workflow application while following 508 compliance guidelines.</li>
             <li>Used C#, ASP.NET MVC 4, Razor syntax, jQuery, Angular, HTML5, Javascript, Entity Framework and Bootstrap.</li>
         </ul>
+        <div id="ExperienceTitle">Software Engineer, TriNet (Contract) 04/2014 – 04/2016</div>
+        <ul id="ulExperience">
+            <li>Created a New Hire API to fill out new hire paperwork while using Web API.</li>
+            <li>Created an API and database schema which was used by an employee time-tracking iPad app.</li>
+            <li>Maintained intra-office web and desktop applications written in C# and VB.net.  These applications were used by TriNet personnel to approve or reject new hire paperwork.</li>
+            <li>Maintained an HR management web application called Accord.  Used C# and JQuery.</li>
+            <li>Wrote stored procedures for a MS SQL server which were accessed by Accord, the time-tracking API, and the New Hire API.</li>
+        </ul>
+        <div id="ExperienceTitle">Software Engineer II, Computer Services, Inc. 04/2009 – 03/2014</div>
+        <ul id="ulExperience">
+            <li>Researched API’s for check scanning hardware created by multiple manufacturers, and implemented UI components for sending check images and data to a backend SOAP service.  Used Microsoft COM and C#. </li>
+            <li>Used Windows Presentation Foundation (WPF) to develop a windows application which stored the service level agreements for financial institutions in Oklahoma.</li>
+            <li>Wrote stored procedures to insert data including scanned checks as well as service level agreements into a Microsoft SQL Server database.</li>
+        </ul>
+        <div id="ExperienceTitle">C# Programmer, Southwest Research Inst.(Contract)  10/2008 – 2/2009</div>
+        <ul id="ulExperience">
+            <li>Developed UI components which imported data from an XML file for editing and exported/formatted for use by a Windows desktop application using C#.   XML data included vibration analysis from fighter aircraft in the U.S. Air Force.</li>
+            <li>Developed a data grid which displayed vibration analysis information using C# and .NET.</li>
+            <li>Created MSI installers for vibration analysis by using installer classes in C#.</li>
+            <li>Developed a Pocket PC application for Windows CE 5.0 which downloaded vibration analysis data.</li>
+        </ul>
+        <div id="ExperienceTitle">Programmer II, Federal Aviation Administration (Contract)   03/2005 – 10/2008</div>
+        <ul id="ulExperience">
+            <li>Developed features including reporting functionality for the Overflight Fee Collection System while using VBScript, calls to DynamicPDF, and SQL stored procedures.</li>
+            <li>Stored and retrieved information to identify vulnerabilities related to storing data in Active Directory Services.</li>
+        </ul>
     </div>
-</div>
+    <div id="divEducation" class="col-md-3 wideRow">
+        <h2 id="EducationSect">Education</h2>
+        <div id="ulExperience">Southern Nazarene University  B.S., Computer Information Systems, 1993</div>
+    </div>

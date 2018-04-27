@@ -17,7 +17,7 @@ namespace ContactPage.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Jason Watson's resume.";
 
             return View();
         }
