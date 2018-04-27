@@ -2,6 +2,16 @@
     ViewData["Title"] = "Contact";
 }
 
+<style>
+    address div {
+        width: 100%;
+    }
+
+    div.input-group.form-group-below {
+        margin: -15px;
+    }
+</style>
+
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
 
@@ -11,23 +21,20 @@
 </address>
 
 @model ContactPage.Models.ContactInfo
-@using (Html.BeginForm("Save", "ContactDetails"))
+@using (Html.BeginForm("Save", "ContactDetails", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
     <address>
         <div class="input-group form-group-below">
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Enter Name", @requried = "required" })
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Enter Name", @required = "required" })
         </div>
 
         <div class="input-group form-group-below">
-            @Html.TextBoxFor(m => m.phoneNumber, new { @class = "form-control", @placeholder = "Enter Phone Number", @requried = "required" })
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+            @Html.TextBoxFor(m => m.phoneNumber, new { @class = "form-control", @placeholder = "Enter Phone Number", @required = "required" })
         </div>
 
         <div class="input-group form-group-below">
-            @Html.TextBoxFor(m => m.emailAddress, new { @class = "form-control", @placeholder = "Enter Email Address", @requried = "required" })
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+            @Html.TextBoxFor(m => m.emailAddress, new { @class = "form-control", @placeholder = "Enter Email Address", @required = "required" })
         </div>
     </address>
     <button type="submit">Save</button>
