@@ -18,29 +18,23 @@ namespace ContactPage.Controllers
             _context = context;
         }
 
-        //
-        // GET: /ContactDetails/
 
+        /// <summary>
+        /// Default action, not really used at the moment
+        /// Stub code in case I want to add it as part of some unit test
+        /// </summary>
+        /// <returns></returns>
         public string Index()
         {
             return "This is my default action...";
         }
 
-        // 
-        // GET: /ContactDetails/Welcome/ 
-
-        //public string Welcome()
-        //{
-        //    return "This is the Welcome action method...";
-        //}
-
-        // GET: /HelloWorld/Welcome/ 
-        // Requires using System.Text.Encodings.Web;
-        public string Welcome(string name, int numTimes = 1)
-        {
-            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
-        }
-
+        /// <summary>
+        /// Save action for posting a response action when called
+        /// The Save action Saves the changes to the database
+        /// </summary>
+        /// <param name="contact"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Save([Bind("Name,phoneNumber,emailAddress")] ContactInfo contact)
